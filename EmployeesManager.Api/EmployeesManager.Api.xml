@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EmployeesManager.Api</name>
+    </assembly>
+    <members>
+        <member name="T:EmployeesManager.Api.AutofacModule">
+            <summary>
+            Register the Instances using a module, for more information
+            http://docs.autofac.org/en/latest/configuration/modules.html
+            </summary>
+        </member>
+        <member name="P:EmployeesManager.Api.AutofacModule.Configuration">
+            <summary>
+            Gets or sets the configuration.
+            </summary>
+            <value>The configuration.</value>
+        </member>
+        <member name="M:EmployeesManager.Api.AutofacModule.Load(Autofac.ContainerBuilder)">
+            <summary>
+            Register the Instances, for more information how to register instances and
+            the instances scopes refer to http://autofac.readthedocs.io/en/latest/lifetime/instance-scope.html
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:EmployeesManager.Api.Controllers.EmployeesController">
+            <summary>
+            Controller to handle employees-related calls.
+            </summary>
+        </member>
+        <member name="M:EmployeesManager.Api.Controllers.EmployeesController.#ctor(EmployeesManager.Business.Contracts.IEmployeeService)">
+            <summary>
+            Initializes a new instance of the EmployeesController class.
+            </summary>
+            <param name="employeeService">The employee Service.</param>
+        </member>
+        <member name="M:EmployeesManager.Api.Controllers.EmployeesController.Get">
+            <summary>
+            Gets all employees data.
+            </summary>
+            <returns>Tha action result with the employees list.</returns>
+        </member>
+        <member name="M:EmployeesManager.Api.Controllers.EmployeesController.Get(System.Int32)">
+            <summary>
+            Gets the data for one employee by id.
+            </summary>
+            <param name="id">The employee id.</param>
+            <returns>The action result with the employee data.</returns>
+        </member>
+        <member name="M:EmployeesManager.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.AspNetCore.Hosting.IApplicationLifetime)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">The application builder.</param>
+            <param name="env">The hosting environment.</param>
+            <param name="appLifetime">The application lifetime.</param>
+        </member>
+        <member name="M:EmployeesManager.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">The service collection.</param>
+        </member>
+    </members>
+</doc>
